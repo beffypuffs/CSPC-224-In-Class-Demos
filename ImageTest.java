@@ -1,5 +1,3 @@
-package image;
-
 import java.awt.*;
 import javax.swing.*;
 
@@ -34,15 +32,16 @@ class ImageFrame extends JFrame
  */
 class ImageComponent extends JComponent
 {
-   private static final int DEFAULT_WIDTH = 1000;
-   private static final int DEFAULT_HEIGHT = 600;
+   private static final int DEFAULT_WIDTH = 1100;
+   private static final int DEFAULT_HEIGHT = 500;
 
-   private Image image1, image2;
+   private Image image1, image2, image3;
 
    public ImageComponent()
    {
       image1 = new ImageIcon("3up.jpg").getImage();
-      image2 = new ImageIcon("5up.jpg").getImage();
+      image2 = new ImageIcon("4up.jpg").getImage();
+      image3 = new ImageIcon("5up.jpg").getImage();
    }
 
    public void paintComponent(Graphics g)
@@ -54,8 +53,9 @@ class ImageComponent extends JComponent
 
       // draw the image in the upper-left corner
 
-      g.drawImage(image1, 100, 100, null);
-      g.drawImage(image2, 150 + image1Width, 100, null);
+      g.drawImage(image1, 50, 100, null);
+      g.drawImage(image2, 70 + image1Width, 100, null);
+      g.drawImage(image3, 90 + image1Width * 2, 100, null);
       
    }
    

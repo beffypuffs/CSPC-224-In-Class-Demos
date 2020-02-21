@@ -1,5 +1,3 @@
-package simpleFrame;
-
 import java.awt.*;
 import javax.swing.*;
 
